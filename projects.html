@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Damian's Porfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<header class="header">
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+  <ul class="menu">
+		<li><a href="file:///C:/Users/Damian/Desktop/Portfolioo/home.html">HOME</a></li>
+        <li><a href="file:///C:/Users/Damian/Desktop/Portfolioo/about.html">ABOUT</a></li>
+        <li><a href="file:///C:/Users/Damian/Desktop/Portfolioo/projects.html">PROJECTS</a></li>
+        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdamCasjYQLx4-e_gnEbV4EGdhs2qEAzHhCaWCrkcHoimVxxA/viewform?usp=sf_link" target="_blank">CONTACT</a></li>
+      </ul>
+</header>
+
+
+<div class="jumbotron text-center">
+  <div class="box fadeInDownBig animated">
+  <h1 class="text">MAXX Potential</h1>
+  <h4 class="text"><font color="white">I've done an eight week internship for MAXX Potential. During the internship I had a role and a team that would change every 2 weeks. The teams were Business Intelligence and Data Governance, Information Security, and System Development.</font></h4>
+</div>
+</div>
+	
+	<div class="container-fluid">
+	<center><h2>MAXX Power</h2></center>
+	<img src="http://baltimoretech.org/wp-content/uploads/2016/01/croppedImg_811025202.png" align="right"/>
+	<div class="row">
+	<div class="col-sm-8">
+	 <h4><strong>Business Intelligence and Data Governance:</strong> My role on the data team was the Data Analyst. I was responsible for interpreting and analyzing data and implementing ways to show the data. I had to provide information about the company's website visitors. To do this I made dashboards for the other teams to help them interpret data. </h4>
+	 <h4><strong>Information Security:</strong> On the InfoSec team I was the Security Incident Response Specialist. Our project was to find and implement a password management system. I went over applications that our System Administrator picked and made sure that they were good to use.</h4>
+	 <h4><strong>System Development:</strong>On the System Development team we had to redesign the company's website. I had two roles on the team, the first one was the UI/UX Designer. As a UI/UX Designer I was responsible for usability and visual design of the User Interfaces, and ensuring intuitive/easy-to-use experiences. The first thing I did was make wireframes so our Software Developers could start working on the site. The second job I had was the Quality Assurance Lead. As the Quality Assurance Lead I had to ensure our delivered products and service meet the established standards of quality including reliability, usability, and performance. I spent time trying to find bugs on our website and putting them in a spreadsheet. I needed to pay attention to every little detail and communicate every thing that I found wrong. </h4>
+	</div>
+	</div>
+	
+	<footer class="container-fluid text-center">
+	<p>Made by Damian Heng</p>
+	</footer>
+	
+	<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
